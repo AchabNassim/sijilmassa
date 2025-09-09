@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import MeccaExplore from "./components/meccaExplore/MeccaExplore";
 import AyaBanner from "./components/AyaBanner";
-import PacksExplore from "./components/meccaExplore/PacksExplore";
+import PacksExplore from "./components/meccapacks/PacksExplore";
 import ServicesSection from "./components/ServicesSection";
 import Testimonials from "./components/Testimonials";
 import ConnectWithUs from "./components/ConnectWithUs";

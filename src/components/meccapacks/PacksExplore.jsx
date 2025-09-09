@@ -27,7 +27,7 @@ const PacksExplore = () => (
               rel="noopener noreferrer"
               className="mt-auto px-8 py-3 rounded-full text-white font-bold text-lg bg-gradient-to-r from-[color:var(--color-gold-500)] to-yellow-400 hover:from-yellow-400 hover:to-[color:var(--color-gold-500)] transition-all shadow-lg ring-2 ring-[color:var(--color-gold-500)]/20"
             >
-              More info
+              More info...
             </a>
           </div>
         ))}

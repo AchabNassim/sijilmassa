@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { FaPlane, FaHotel, FaMapMarkedAlt, FaShuttleVan } from "react-icons/fa";
 
 const services = [
