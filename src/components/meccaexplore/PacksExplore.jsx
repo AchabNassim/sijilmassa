@@ -14,7 +14,7 @@ const PacksExplore = () => (
             key={pack.name}
             className="flex-1 min-w-[320px] max-w-[420px] rounded-3xl shadow-xl flex flex-col items-center p-8 border border-gray-100 hover:shadow-2xl transition-shadow bg-[color:var(--color-gray-100)]"
           >
-            <img src={`/icons/${pack.icon}`} alt={pack.name + ' icon'} className="w-16 h-16 mb-4" />
+            <img src={`icons/${pack.icon}`} alt={pack.name + ' icon'} className="w-16 h-16 mb-4" />
             <h3 className="text-3xl font-bold mb-3 text-center text-[color:var(--color-gold-500)]">{pack.name}</h3>
             <ul className="mb-6 text-gray-900 text-lg list-disc list-inside w-full max-w-xs mx-auto">
               {pack.features.map((feature, i) => (
@@ -27,7 +27,7 @@ const PacksExplore = () => (
               rel="noopener noreferrer"
               className="mt-auto px-8 py-3 rounded-full text-white font-bold text-lg bg-gradient-to-r from-[color:var(--color-gold-500)] to-yellow-400 hover:from-yellow-400 hover:to-[color:var(--color-gold-500)] transition-all shadow-lg ring-2 ring-[color:var(--color-gold-500)]/20"
             >
-              Book Now
+              More info
             </a>
           </div>
         ))}

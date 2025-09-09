@@ -6,7 +6,7 @@ const Header = () => {
   return (
   <div id="top" className="relative min-h-[80vh] w-full flex items-center justify-center overflow-hidden">
     <img
-      src="/imgs/masjid.webp"
+      src="imgs/masjid.webp"
       alt="Masjid background"
       className="absolute inset-0 w-full h-full object-cover object-center z-0 scale-105 brightness-[.55]"
       style={{ minHeight: '80vh' }}

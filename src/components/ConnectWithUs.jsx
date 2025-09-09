@@ -17,7 +17,7 @@ const ConnectWithUs = () => (
         </a>
       </div>
         <div className="flex items-center justify-center w-full max-w-md h-60 md:h-full mx-auto md:mx-0">
-          <img src="./imgs/connect.jpg" alt="Connect with us" className="h-full w-auto max-h-60 md:max-h-none object-cover rounded-none shadow-none border-0" />
+          <img src="./imgs/connect.webp" alt="Connect with us" className="h-full w-auto max-h-60 md:max-h-none object-cover rounded-none shadow-none border-0" />
       </div>
     </div>
   </section>
