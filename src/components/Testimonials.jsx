@@ -27,7 +27,7 @@ const testimonials = [
 const Testimonials = () => (
   <section className="w-full py-16 bg-white flex flex-col items-center">
     <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-10 text-green-500">What Our Travelers Say</h2>
-    <div className="flex flex-col md:flex-row gap-10 w-full max-w-6xl justify-center items-stretch">
+    <div className="flex flex-col md:flex-row gap-10 w-full max-w-6xl justify-center items-center lg:items-stretch">
       {testimonials.map((t, i) => (
         <div key={i} className="flex-1 min-w-[260px] max-w-[340px] rounded-3xl shadow-xl flex flex-col items-center p-8 border border-gray-100 bg-[color:var(--color-gray-100)] hover:shadow-2xl transition-shadow">
           <p className="text-lg text-gray-900 text-center mb-6">“{t.text}”</p>
