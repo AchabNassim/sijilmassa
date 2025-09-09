@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  /* breakpoints */
+  --breakpoint-xl: 1800px;
+  --breakpoint-2xl: 2600px;
+
+  /* neutrals */
+  --color-gray-100: #f5f7f8;
+  --color-gray-200: #e9ebed;
+  --color-gray-300: #dcdfe2;
+  --color-gray-400: #cfd3d6;
+  --color-gray-500: #bfc3c7;
+  --color-gray-600: #9fa4a7;
+  --color-gray-700: #7f8487;
+  --color-gray-800: #5f6467;
+  --color-gray-900: #2e2f30; /* body text */
+
+  /* greens (brand) */
+  --color-green-100: #e6f0eb;
+  --color-green-200: #c2d9cc;
+  --color-green-300: #9ec1ae;
+  --color-green-400: #6ea684;
+  --color-green-500: #1a6b44; /* heading green */
+  --color-green-600: #15583a;
+  --color-green-700: #124e31; /* navbar */
+  --color-green-800: #0e3e27; /* footer / darker areas */
+  --color-green-900: #0a2d1c;
+
+  /* gold / orange accent */
+  --color-gold-100: #fff6e6;
+  --color-gold-200: #ffe4b8;
+  --color-gold-300: #ffd18a;
+  --color-gold-400: #ffbe5c;
+  --color-gold-500: #d99a29; /* main accent */
+  --color-gold-600: #b87f20;
+  --color-gold-700: #966518;
+  --color-gold-800: #734b10;
+  --color-gold-900: #513107;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    background-color: #F5F7F8;
+    min-height: 100vh;
+    
+  }
+
+}
+
