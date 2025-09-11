@@ -8,7 +8,7 @@ const testimonials = [
     pack: "Umrah Essentials"
   },
   {
-    name: "Youssef K.",
+    name: "Ayoub D.",
     text: "The best travel agency for Hajj and Umrah. Highly recommended for their professionalism and care.",
     pack: "Premium Hajj"
   },

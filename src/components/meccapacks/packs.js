@@ -1,7 +1,10 @@
 const packs = [
+  // pack premium
   {
-    icon: "kaaba.png",
+    icon: "kaabaPremium.png",
+    // pack name
     name: "Umrah Essentials",
+    // features of the pack
     features: [
       "Visa processing",
       "3-star hotel accommodation",
@@ -9,10 +12,24 @@ const packs = [
       "Guided tours of holy sites",
       "Airport transfers"
     ],
-    whatsapp: "https://wa.me/"
+    // images displayed inside the pack
+    images: [
+      "imgs/bedroom.jpg",
+      "imgs/entrance.jpg",
+      "imgs/hotel.jpg",
+      "imgs/room.jpg"
+    ],
+    // pricing
+    tarifs: {
+      quad: "12000dh",
+      triple: "14000dh",
+      double: "16000dh",
+      single: "20000dh"
+    }
   },
+  // another pack
   {
-    icon: "kaabaPremium.png",
+    icon: "diamond.png",
     name: "Premium Hajj",
     features: [
       "5-star hotel accommodation",
@@ -21,8 +38,20 @@ const packs = [
       "Dedicated group leader",
       "Ziyarat tours"
     ],
-    whatsapp: "https://wa.me/"
+    images: [
+      "imgs/bedroom.jpg",
+      "imgs/entrance.jpg",
+      "imgs/hotel.jpg",
+      "imgs/room.jpg"
+    ],
+    tarifs: {
+      quad: "25000dh",
+      triple: "28000dh",
+      double: "32000dh",
+      single: "40000dh"
+    }
   },
+  // another pack
   {
     icon: "transport.png",
     name: "Family & Youth",
@@ -33,7 +62,18 @@ const packs = [
       "Group discounts",
       "24/7 support"
     ],
-    whatsapp: "https://wa.me/"
+    images: [
+      "imgs/bedroom.jpg",
+      "imgs/entrance.jpg",
+      "imgs/hotel.jpg",
+      "imgs/room.jpg"
+    ],
+    tarifs: {
+      quad: "10000dh",
+      triple: "12000dh",
+      double: "14000dh",
+      single: "18000dh"
+    }
   }
 ];
 
