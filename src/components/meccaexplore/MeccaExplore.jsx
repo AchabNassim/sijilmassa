@@ -6,11 +6,10 @@ import cityCards from "./cities.js";
 const MeccaExplore = () => (
   <section className="w-full py-16 bg-white flex flex-col items-center relative overflow-hidden">
     <ParticleBackground />
-    <div className="relative z-10 w-full flex flex-col items-center">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-green-500">Explore The holly city of Mecca</h2>
+    <div className="relative z-2 w-full flex flex-col items-center">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-green-500">استكشف المدينة المقدسة مكة</h2>
       <p className="text-lg md:text-xl text-center max-w-2xl mb-12 text-gray-900">
-        Discover the most iconic and sacred sites of Mecca, each with its own unique story and spiritual significance.
-      </p>
+اكتشف أشهر وأقدس المواقع في مكة، لكل منها قصته الفريدة وأهميته الروحية      </p>
       <div className="flex flex-col md:flex-row gap-10 w-full max-w-6xl justify-center items-stretch">
         {cityCards.map(card => (
           <a

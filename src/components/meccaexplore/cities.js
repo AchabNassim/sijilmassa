@@ -1,20 +1,20 @@
 const cityCards = [
   {
     img: "imgs/kaaba.webp",
-    name: "Kaaba",
-    desc: "The sacred heart of Mecca, a spiritual center for millions of pilgrims each year.",
+    name: "الكعبة",
+    desc: "القلب المقدس لمكة، مركز روحي لملايين الحجاج كل عام.",
     link: "https://fr.wikipedia.org/wiki/Kaaba"
   },
   {
     img: "imgs/masjidnabawi.webp",
-    name: "Al masjid Nabawi",
-    desc: "The grand mosque surrounding the Kaaba, a marvel of faith and architecture.",
+    name: "المسجد النبوي",
+    desc: "المسجد الكبير المحيط بالكعبة، أعجوبة في الإيمان والهندسة المعمارية.",
     link: "https://fr.wikipedia.org/wiki/Mosqu%C3%A9e_du_Proph%C3%A8te"
   },
   {
     img: "imgs/safa_marwa.webp",
-    name: "Safa mawra and Sa'i",
-    desc: "a key component of the Hajj and Umrah pilgrimages.",
+    name: "السعي بين الصفا والمروة",
+    desc: "عنصر أساسي في مناسك الحج والعمرة.",
     link: "https://fr.wikipedia.org/wiki/Safa_and_Marwah"
   }
 ];

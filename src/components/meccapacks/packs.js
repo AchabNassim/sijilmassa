@@ -1,79 +1,72 @@
 const packs = [
-  // pack premium
   {
     icon: "kaabaPremium.png",
-    // pack name
-    name: "Umrah Essentials",
-    // features of the pack
+    name: "عُمرة أساسية",
     features: [
-      "Visa processing",
-      "3-star hotel accommodation",
-      "Daily breakfast",
-      "Guided tours of holy sites",
-      "Airport transfers"
+      "معالجة التأشيرة",
+      "إقامة في فندق 3 نجوم",
+      "إفطار يومي",
+      "جولات ميدانية للأماكن المقدسة",
+      "خدمة النقل من وإلى المطار",
     ],
-    // images displayed inside the pack
     images: [
       "imgs/bedroom.jpg",
       "imgs/entrance.jpg",
       "imgs/hotel.jpg",
-      "imgs/room.jpg"
+      "imgs/room.jpg",
     ],
-    // pricing
     tarifs: {
-      quad: "12000dh",
-      triple: "14000dh",
-      double: "16000dh",
-      single: "20000dh"
-    }
+      quad: "12000 درهم",
+      triple: "14000 درهم",
+      double: "16000 درهم",
+      single: "20000 درهم",
+    },
   },
-  // another pack
   {
     icon: "diamond.png",
-    name: "Premium Hajj",
+    name: "الحج المميز",
     features: [
-      "5-star hotel accommodation",
-      "All meals included",
-      "Private group transport",
-      "Dedicated group leader",
-      "Ziyarat tours"
+      "إقامة في فندق 5 نجوم",
+      "جميع الوجبات مشمولة",
+      "نقل خاص بالمجموعة",
+      "قائد مجموعة مخصص",
+      "جولات زيارات (زيارات دينية)",
     ],
     images: [
       "imgs/bedroom.jpg",
       "imgs/entrance.jpg",
       "imgs/hotel.jpg",
-      "imgs/room.jpg"
+      "imgs/room.jpg",
     ],
     tarifs: {
-      quad: "25000dh",
-      triple: "28000dh",
-      double: "32000dh",
-      single: "40000dh"
-    }
+      quad: "25000 درهم",
+      triple: "28000 درهم",
+      double: "32000 درهم",
+      single: "40000 درهم",
+    },
   },
-  // another pack
   {
     icon: "transport.png",
-    name: "Family & Youth",
+    name: "العائلات والشباب",
     features: [
-      "Family-friendly hotels",
-      "Youth activities",
-      "Flexible dates",
-      "Group discounts",
-      "24/7 support"
+      "فنادق مناسبة للعائلات",
+      "أنشطة خاصة بالشباب",
+      "مواعيد مرنة",
+      "خصومات للمجموعات",
+      "دعم 24/7",
     ],
     images: [
       "imgs/bedroom.jpg",
       "imgs/entrance.jpg",
       "imgs/hotel.jpg",
-      "imgs/room.jpg"
+      "imgs/room.jpg",
     ],
     tarifs: {
-      quad: "10000dh",
-      triple: "12000dh",
-      double: "14000dh",
-      single: "18000dh"
-    }
+      quad: "10000 درهم",
+      triple: "12000 درهم",
+      double: "14000 درهم",
+      single: "18000 درهم",
+    },
   },
 ];
 
