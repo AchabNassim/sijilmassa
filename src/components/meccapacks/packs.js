@@ -74,7 +74,7 @@ const packs = [
       double: "14000dh",
       single: "18000dh"
     }
-  }
+  },
 ];
 
 export default packs;

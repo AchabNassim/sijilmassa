@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="w-full bg-green-700 flex justify-between px-4">
-        <img src="./imgs/logo.png" className="h-20 w-40" />
+        <img src="./imgs/logo.png" className="h-18 w-35" />
     <ul className="hidden sm:flex items-center gap-10 text-lg">
       <li>
         <a href="#top" className="text-white hover:text-yellow-300 transition-colors">Home</a>

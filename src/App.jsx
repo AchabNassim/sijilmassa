@@ -14,9 +14,9 @@ const App = () => {
     <>
       <Navbar />
       <Header />
+      <PacksExplore />
       <MeccaExplore />
       <AyaBanner />
-      <PacksExplore />
       <ServicesSection />
       <Testimonials />
       <ConnectWithUs />
