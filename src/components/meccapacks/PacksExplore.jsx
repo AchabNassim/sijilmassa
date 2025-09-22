@@ -1,92 +1,128 @@
 import React, { useState } from "react";
 import packs from './packs.js';
+import WhatsappButton from "../whatsappButton.jsx";
 
-const PacksModal = ({ open, onClose, pack }) => {
-  const [current, setCurrent] = useState(0);
-  if (!open || !pack) return null;
-  const images = pack.images || [];
-  const tarifs = pack.tarifs || {};
-
-  const prev = () => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
-
+const ImageModal = ({ open, onClose, src, alt }) => {
+  if (!open) return null;
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center">
-      {/* Overlay */}
+    <div className="fixed inset-0 z-[200] flex items-center justify-center">
       <div
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm z-[101]"
+        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
         onClick={onClose}
       />
-      {/* Modal */}
-      <div
-        className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6 relative flex flex-col items-center z-[102]"
-        onClick={e => e.stopPropagation()}
-      >
+      <div className="relative z-[201] flex flex-col items-center">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold"
+          className="absolute top-2 right-2 text-white text-3xl font-bold z-[202] hover:scale-110 transition-transform"
           aria-label="إغلاق"
         >
           &times;
         </button>
-        <h2 className="text-3xl font-bold mb-4 text-center text-[color:var(--color-gold-500)]">{pack.name}</h2>
-        <div className="relative w-full max-w-lg flex items-center justify-center mb-6">
-          {images.length > 0 && (
-            <img
-              src={images[current]}
-              alt={pack.name + ' صورة ' + (current + 1)}
-              className="w-full h-64 object-cover rounded-xl border border-gray-200"
-            />
-          )}
-          {images.length > 1 && (
-            <>
-              <button
-                onClick={e => { e.stopPropagation(); prev(); }}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-3 shadow hover:bg-white"
-                aria-label="الصورة السابقة"
-              >
-                &#8592;
-              </button>
-              <button
-                onClick={e => { e.stopPropagation(); next(); }}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-3 shadow hover:bg-white"
-                aria-label="الصورة التالية"
-              >
-                &#8594;
-              </button>
-            </>
-          )}
-        </div>
-        <div className="w-full max-w-md mx-auto mb-4">
-          <table className="w-full text-lg border border-gray-200 rounded-xl overflow-hidden">
-            <thead>
-              <tr className="bg-[color:var(--color-gold-100)]">
-                <th className="py-2 px-3 text-left">الغرفة</th>
-                <th className="py-2 px-3 text-right">السعر</th>
-              </tr>
-            </thead>
-            <tbody>
-              {['quad', 'triple', 'double', 'single'].map((key) => (
-                tarifs[key] && (
-                  <tr key={key} className="border-t border-gray-100">
-                    <td className="py-2 px-3 capitalize">
-                      {key === 'quad' && 'غرفة رباعية'}
-                      {key === 'triple' && 'غرفة ثلاثية'}
-                      {key === 'double' && 'غرفة مزدوجة'}
-                      {key === 'single' && 'غرفة فردية'}
-                    </td>
-                    <td className="py-2 px-3 text-right font-bold text-[color:var(--color-gold-500)]">{tarifs[key]}</td>
-                  </tr>
-                )
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <img
+          src={src}
+          alt={alt}
+          className="max-h-[90vh] max-w-[95vw] rounded-2xl shadow-2xl border border-white"
+        />
       </div>
     </div>
   );
 };
 
+const PacksModal = ({ open, onClose, pack }) => {
+  const [current, setCurrent] = useState(0);
+  const [showImageModal, setShowImageModal] = useState(false);
+  if (!open || !pack) return null;
+  const images = pack.images || [];
+
+  const prev = () => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
+
+  return (
+    <>
+      <div className="fixed inset-0 z-[100] flex items-center justify-center">
+        {/* Overlay */}
+        <div
+          className="absolute inset-0 bg-black/70 backdrop-blur-sm z-[101]"
+          onClick={onClose}
+        />
+        {/* Modal */}
+        <div
+          className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full p-10 relative flex flex-col items-center z-[102]"
+          onClick={e => e.stopPropagation()}
+        >
+          <button
+            onClick={onClose}
+            className="absolute top-6 right-8 text-gray-500 hover:text-red-500 text-3xl font-bold"
+            aria-label="إغلاق"
+          >
+            &times;
+          </button>
+          <div className="relative w-full max-w-2xl flex items-center justify-center mb-8">
+            {images.length > 0 && (
+              <div className="relative w-full">
+                <img
+                  src={images[current]}
+                  alt={pack.name + ' صورة ' + (current + 1)}
+                  className="w-full max-h-[500px] object-contain rounded-xl border border-gray-200 cursor-pointer"
+                  onClick={() => setShowImageModal(true)}
+                  title="انقر لتكبير الصورة"
+                  style={{ background: "#f8f8f8" }}
+                />
+                <button
+                  onClick={() => setShowImageModal(true)}
+                  className="absolute bottom-4 right-4 flex items-center gap-2 bg-gradient-to-r from-[color:var(--color-gold-500)] to-yellow-400 text-white px-5 py-2 rounded-full shadow-lg font-semibold text-base hover:from-yellow-400 hover:to-[color:var(--color-gold-500)] transition-all border-2 border-white/70 backdrop-blur-sm"
+                  title="تكبير الصورة"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V6a2 2 0 012-2h2M16 4h2a2 2 0 012 2v2M20 16v2a2 2 0 01-2 2h-2M8 20H6a2 2 0 01-2-2v-2" />
+                  </svg>
+                  تكبير الصورة
+                </button>
+              </div>
+            )}
+            {images.length > 1 && (
+              <>
+                <button
+                  onClick={e => { e.stopPropagation(); prev(); }}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-4 shadow hover:bg-white text-2xl"
+                  aria-label="الصورة السابقة"
+                >
+                  &#8592;
+                </button>
+                <button
+                  onClick={e => { e.stopPropagation(); next(); }}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-4 shadow hover:bg-white text-2xl"
+                  aria-label="الصورة التالية"
+                >
+                  &#8594;
+                </button>
+              </>
+            )}
+            {/* Dots */}
+            {images.length > 1 && (
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {images.map((_, idx) => (
+                  <span
+                    key={idx}
+                    className={`inline-block w-3 h-3 rounded-full ${idx === current ? 'bg-[color:var(--color-gold-500)]' : 'bg-gray-300'}`}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+          <WhatsappButton buttonText={'احجز عبر الواتساب'} className={'px-12 py-4 text-xl rounded-4xl'} />
+        </div>
+      </div>
+      {/* Fullscreen Image Modal */}
+      <ImageModal
+        open={showImageModal}
+        onClose={() => setShowImageModal(false)}
+        src={images[current]}
+        alt={pack.name + ' صورة ' + (current + 1)}
+      />
+    </>
+  );
+};
 
 const PacksExplore = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -122,9 +158,7 @@ const PacksExplore = () => {
                 ))}
               </ul>
               <p
-                onClick={(e) => { e.stopPropagation();
-                  handleOpenModal(pack)}
-                }
+                onClick={(e) => { e.stopPropagation(); handleOpenModal(pack); }}
                 className="mt-auto px-8 py-3 rounded-full text-white font-bold text-lg bg-gradient-to-r from-[color:var(--color-gold-500)] to-yellow-400 hover:from-yellow-400 hover:to-[color:var(--color-gold-500)] transition-all shadow-lg ring-2 ring-[color:var(--color-gold-500)]/20"
               >
                 التفاصيل

@@ -1,7 +1,7 @@
 const packs = [
   {
     icon: "kaabaPremium.png",
-    name: "عُمرة أساسية",
+    name: "برامج أكتوبر",
     features: [
       "معالجة التأشيرة",
       "إقامة في فندق 3 نجوم",
@@ -10,21 +10,13 @@ const packs = [
       "خدمة النقل من وإلى المطار",
     ],
     images: [
-      "imgs/bedroom.jpg",
-      "imgs/entrance.jpg",
-      "imgs/hotel.jpg",
-      "imgs/room.jpg",
+      "imgs/october.jpeg",
+      "imgs/october+.jpeg",
     ],
-    tarifs: {
-      quad: "12000 درهم",
-      triple: "14000 درهم",
-      double: "16000 درهم",
-      single: "20000 درهم",
-    },
   },
   {
     icon: "diamond.png",
-    name: "الحج المميز",
+    name: "برنامج عمرة الحبيب",
     features: [
       "إقامة في فندق 5 نجوم",
       "جميع الوجبات مشمولة",
@@ -33,21 +25,12 @@ const packs = [
       "جولات زيارات (زيارات دينية)",
     ],
     images: [
-      "imgs/bedroom.jpg",
-      "imgs/entrance.jpg",
-      "imgs/hotel.jpg",
-      "imgs/room.jpg",
+      "imgs/alHabib.jpeg",
     ],
-    tarifs: {
-      quad: "25000 درهم",
-      triple: "28000 درهم",
-      double: "32000 درهم",
-      single: "40000 درهم",
-    },
   },
   {
     icon: "transport.png",
-    name: "العائلات والشباب",
+    name: "برامج ديسمبر",
     features: [
       "فنادق مناسبة للعائلات",
       "أنشطة خاصة بالشباب",
@@ -56,17 +39,9 @@ const packs = [
       "دعم 24/7",
     ],
     images: [
-      "imgs/bedroom.jpg",
-      "imgs/entrance.jpg",
-      "imgs/hotel.jpg",
-      "imgs/room.jpg",
+      "imgs/december.jpeg",
+      "imgs/december+.jpeg",
     ],
-    tarifs: {
-      quad: "10000 درهم",
-      triple: "12000 درهم",
-      double: "14000 درهم",
-      single: "18000 درهم",
-    },
   },
 ];
 

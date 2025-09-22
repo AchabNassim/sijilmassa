@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="flex items-center mb-6 md:mb-0">
   <img src="imgs/logo.png" alt="Logo" className="h-14 w-auto" />
     </div>
-    <div className="flex flex-col items-center gap-2 pr-8 md:pr-16">
+    <div className="flex flex-col items-center gap-2 md:pr-8 md:pr-16">
       <span className="text-white font-semibold text-lg mb-2">Connect with us:</span>
       <div className="flex gap-7">
         <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white hover:text-[color:var(--color-gold-500)] text-2xl" aria-label="Facebook">
