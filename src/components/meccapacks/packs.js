@@ -1,6 +1,6 @@
 const packs = [
   {
-    icon: "kaabaPremium.png",
+    icon: "kaabaIcon.png",
     name: "برامج أكتوبر",
     features: [
       "معالجة التأشيرة",
@@ -15,7 +15,7 @@ const packs = [
     ],
   },
   {
-    icon: "diamond.png",
+    icon: "alHabibIcon.png",
     name: "برنامج عمرة الحبيب",
     features: [
       "إقامة في فندق 5 نجوم",
@@ -29,7 +29,7 @@ const packs = [
     ],
   },
   {
-    icon: "transport.png",
+    icon: "kaabaIcon2.png",
     name: "برامج ديسمبر",
     features: [
       "فنادق مناسبة للعائلات",
