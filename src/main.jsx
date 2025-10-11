@@ -12,6 +12,7 @@ createRoot(document.getElementById('root')).render(
     <Routes>
       <Route path="/sijilmassa" element={<App />} />
       <Route path="/sijilmassa/aboutUs" element={<AboutUs />} />
+      <Route path="/sijilmassa/:packId" element={<PackDetails />} />
     </Routes>
     </BrowserRouter>
   </StrictMode>,

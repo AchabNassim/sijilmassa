@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import WhatsappButton from "./whatsappButton";
 
 const Header = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div
       id="top"
@@ -14,11 +24,23 @@ const Header = () => {
         style={{ minHeight: "80vh" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-white/30 z-10" />
-      <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 py-16">
-        <h1 className="text-4xl md:text-6xl font-black text-center drop-shadow-2xl mb-6 tracking-tight leading-tight text-[color:var(--color-gold-500)]">
+      <div className={`relative z-20 flex flex-col items-center justify-center w-full px-4 py-16 transition-all duration-1000 ease-out ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-8'
+      }`}>
+        <h1 className={`text-4xl md:text-6xl font-black text-center drop-shadow-2xl mb-6 tracking-tight leading-tight text-[color:var(--color-gold-500)] transition-all duration-1200 ease-out delay-200 ${
+          isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-12'
+        }`}>
           رحلتك المباركة<br className="hidden md:inline" /> تبدأ من هنا
         </h1>
-        <p className="max-w-2xl text-lg md:text-2xl text-center font-medium mb-8 drop-shadow-md text-gray-100">
+        <p className={`max-w-2xl text-lg md:text-2xl text-center font-medium mb-8 drop-shadow-md text-gray-100 transition-all duration-1200 ease-out delay-400 ${
+          isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-12'
+        }`}>
           مرحبًا بك في{" "}
           <span className="font-bold text-[color:var(--color-gold-500)]">
             سجلماسة ترافلز
@@ -27,7 +49,13 @@ const Header = () => {
           اكتشف روائع مكة وتعرّف على باقاتنا الاستثنائية والشاملة المصممة
           لراحتك وطمأنينتك.
         </p>
-        <WhatsappButton buttonText={'احجز الآن'} className={'text-xl px-12 py-4 rounded-4xl'} />
+        <div className={`transition-all duration-1200 ease-out delay-600 ${
+          isVisible 
+            ? 'opacity-100 translate-y-0 scale-100' 
+            : 'opacity-0 translate-y-12 scale-95'
+        }`}>
+          <WhatsappButton buttonText={'احجز الآن'} className={'text-xl px-12 py-4 rounded-4xl'} />
+        </div>
       </div>
     </div>
   );
