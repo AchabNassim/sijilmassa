@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import './index.css'
 import App from './pages/App.jsx'
 const AboutUs = lazy(() => import('./pages/AboutUs.jsx'))
+const PackDetails = lazy(() => import('./pages/PackDetails.jsx'))
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

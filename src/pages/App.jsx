@@ -12,17 +12,24 @@ import Loader from "../components/loader/Loader.jsx";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoaderExiting, setIsLoaderExiting] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const fadeTimer = setTimeout(() => {
+      setIsLoaderExiting(true);
+    }, 2000);
+    const removeTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 500); // 0.5 seconds
+    }, 2500);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(removeTimer);
+    };
   }, []);
 
   if (isLoading) {
-    return <Loader />;
+    return <Loader isExiting={isLoaderExiting} />;
   }
 
   return (
